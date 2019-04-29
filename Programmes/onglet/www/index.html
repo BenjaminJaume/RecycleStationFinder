@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+
+<head>
+
+    <title>Tab View Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
+    <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
+
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>
+        
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src='cordova.js'></script>
+
+    <script type="text/javascript" src="js/main.js"></script> 
+    <script type="text/javascript" src="js/functions.js"></script> 
+    <script type="text/javascript" src="js/database.js"></script> 
+    <script type="text/javascript" src="js/containers.js"></script> 
+        
+</head>
+
+<body onload="initialiser()">
+
+    <div id="splashscreen" class='ui-loader heavy'>
+        RSF - Recycle Station Finder
+        <br>
+        <br>
+        <span class='ui-icon ui-icon-loading spin'></span>
+    </div>
+
+    <div class="view">
+        <header>
+            <h1>RSF - Recycle Station Finder</h1>
+        </header>
+
+        <div class="pages">
+
+            <!--Tab View Pages-->
+            <div class="panel" data-title="Map" id="tab1" data-selected="true">
+                <div id="map" style="width:100%; height:100%"></div>
+            </div>
+
+            <div class="panel" data-title="Details" id="tab2" >
+                <br />
+                <center>
+                    <h2>
+                        The tools "Details"  <br />
+                        is not available yet
+                    </h2>
+                </center>
+            </div>
+
+            <div class="panel" data-title="Add a container" id="tab3">
+                <br />
+                <center>
+                    <h2>
+                        The tools "Add a container"  <br />
+                        is not available yet
+                    </h2>
+                </center>
+            </div>
+
+            <div class="panel" data-title="Settings" id="tab4">
+                <br />
+                <center>
+                    <h2>
+                        The tools "Settings"  <br />
+                        is not available yet
+                    </h2>
+                </center>
+            </div>
+
+        </div>
+
+        <footer>
+            <a href="#tab1" class="icon pin" onclick="$.afui.clearHistory()">Display map</a>
+            <a href="#tab2" class="icon question" onclick="$.afui.clearHistory()">Containers</a>
+            <a href="#tab3" class="icon add" onclick="$.afui.clearHistory()">Add container</a>
+            <a href="#tab4" class="icon settings" onclick="$.afui.clearHistory()">Settings</a>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

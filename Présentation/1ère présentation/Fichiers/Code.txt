@@ -1,0 +1,52 @@
+//#######################################################################
+//# 					IN THE FILE : main.js 							#
+//#######################################################################
+
+// function called when the application is started
+
+function drawMap() {
+    var mapOptions = { 							// define the map options (center, zoom, zoom options, etc)
+        center: mapCenterAtLaunch,
+        zoom:8,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL,
+            position: google.maps.ControlPosition.LEFT_TOP
+        }
+    };
+    if (boolTripTrack === true) {
+        _map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions); // create the map with the options defined below
+    }
+}
+
+//#######################################################################
+//# 					IN THE FILE : functions.js 						#
+//#######################################################################
+
+// Create a new marker on the map "_map"
+
+var marker = new google.maps.Marker({
+	position: myLatLng,
+	map: _map,
+	animation: google.maps.Animation.DROP,
+	icon: wilhelmshavenIcon
+});
+
+//#######################################################################
+//# 					IN THE FILE : database.js 						#
+//#######################################################################
+
+
+var latitudeGR = [53.548264, // latitude of Jade Hochschule
+                53.537444, // Latitude of the first container
+];
+
+var longitudeGR = [8.088609, // longitute of Jade Hochschule
+                8.067528, // Longitude of the first container
+];
+
+var addressGR = ["Weserstraﬂe 4/52, 26931 Elsfleth, GERMANY", // address of Jade Hochschule (school)
+                "Accumer Straﬂe / Schaarreihe, GERMANY", // address of the first container
+];
+

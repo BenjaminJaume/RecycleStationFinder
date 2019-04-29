@@ -1,0 +1,11 @@
+// Place un pins sur la map
+var marker_3 = new google.maps.Marker({
+	position: container3,
+	map: _map
+});
+
+// Faire un zoom sur le point de latitude 'latitude_container1' et de longitude 'longitude_container1'
+_llbounds = new google.maps.LatLngBounds(new google.maps.LatLng(latitude_container1, longitude_container1));
+//Sets the viewport to contain the given bounds & triggers the "zoom_changed" event
+_map.fitBounds(_llbounds); // permet de zoomer à l'endroit du pins
+

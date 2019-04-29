@@ -1,0 +1,11 @@
+try {
+	$bdd = new PDO('mysql:host=sql2.olympe.in;dbname=gjkaav66;charset=utf8', 'gjkaav66', 'baboon33440');
+}
+catch(Exception $e) {
+	die('Erreur : '.$e->getMessage());
+}
+
+$req = $bdd->prepare('INSERT INTO actualites(date, objet, contenu) VALUES(:date, :objet, :contenu)');
+$req->execute(array('date' => $_POST['date'], 'objet' => $_POST['objet'], 'contenu' => $_POST['contenu']));
+
+header("location: Actualites.php");
